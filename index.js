@@ -19,3 +19,10 @@ app.listen(port, ()=>{
 app.get("/course", (req, res) => {
     res.send(course);
   });
+
+  app.get("/course/:id", (req, res) => {
+    id = req.params.id;
+    console.log(id);
+    const selectedcourse = course.find((n) => n._id === id);
+    res.send(selectedcourse);
+  });
