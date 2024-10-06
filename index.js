@@ -9,7 +9,7 @@ const course = require("./data/courseDetails.json");
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Bootcamp The Breaaking News Server is Running");
+  res.send("Assisnment 4 Online Course Server is running");
 });
 
 app.listen(port, ()=>{
@@ -25,4 +25,4 @@ app.get("/course", (req, res) => {
     console.log(id);
     const selectedcourse = course.find((n) => n._id === id);
     res.send(selectedcourse);
-  });
+  }); 
